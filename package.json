@@ -1,11 +1,12 @@
 {
-  "name": "insta-api",
+  "name": "nestjs-boilerplate",
   "version": "1.0.0",
-  "description": "Instagram API service",
+  "description": "Nestjs Boilerplate for API service",
   "license": "MIT",
   "scripts": {
-    "start": "node dist/server",
-    "webpack": "webpack --config webpack.config.js"
+    "dev": "node dist/server",
+    "webpack": "webpack --config webpack.config.js",
+    "start": "NODE_ENV=development ts-node src/main.ts"
   },
   "dependencies": {
     "@nestjs/common": "6.4.0",
