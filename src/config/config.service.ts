@@ -40,11 +40,11 @@ export class ConfigService {
     return validatedEnvConfig;
   }
 
-  get isApiAuthEnabled(): boolean {
+  get isApiAuthEnabled(): any {
     return Boolean(this.envConfig.API_AUTH_ENABLED);
   }
 
-  get appName(): string {
+  get appName(): any {
     return this.envConfig.APP_NAME;
   }
 

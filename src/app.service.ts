@@ -8,6 +8,6 @@ export class AppService {
     this.appName = config.appName
   }
   getHello() {
-    return 'Hello world! new ' + this.appName;
+    return 'Hello world!' + this.appName;
   }
 }
