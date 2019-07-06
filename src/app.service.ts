@@ -3,9 +3,9 @@ import { ConfigService } from './config/config.service';
 
 @Injectable()
 export class AppService {
-  private appName: any;
+  private readonly appName: any;
   constructor(config: ConfigService) {
-    this.appName = config.appName
+    this.appName = config.appName;
   }
   getHello() {
     return 'Hello world!' + this.appName;

@@ -6,13 +6,18 @@ import { EventsModule } from './events/events.module';
 import { AuthModule } from './auth/auth.module';
 import { ConfigModule } from './config/config.module';
 import { MongooseModule } from '@nestjs/mongoose';
+import {ProductsModule} from './products/products.module';
+import { ExceptionsModule } from './exceptions/exceptions.module';
 
 @Module({
   imports: [
     EventsModule,
     AuthModule,
     ConfigModule,
-    MongooseModule.forRoot('mongodb://localhost/insta_api')
+    MongooseModule.forRoot('mongodb://localhost/insta_api', { useNewUrlParser: true } ),
+    ProductsModule,
+    ExceptionsModule,
+
   ],
   controllers: [AppController],
   providers: [AppService, EventsGateway],
